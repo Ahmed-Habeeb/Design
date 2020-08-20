@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter1/screens/covid-19.dart';
-import 'file:///C:/Users/ahmed/AndroidStudioProjects/flutter1/lib/screens/food_screen.dart';
+import 'package:flutter1/screens/profiles/firstprofile.dart';
+import 'package:flutter1/screens/profiles/secprofile.dart';
 
 import 'modules/screens_module.dart';
+import 'screens/food_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +19,10 @@ class _MyAppState extends State<MyApp> {
   List<Screens_module> screens=[
     Screens_module("Food-Delivery",()=>Food()),
     Screens_module("Covid-19",()=>Covid()),
+    Screens_module("Profile-1",()=>Firstprofile()),
+    Screens_module("Profile-2",()=>Profile2()),
+
+
 
 
   ];
