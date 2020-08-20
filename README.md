@@ -1,6 +1,6 @@
 # Design App
 
-In this App I try To Design Some Screens.
+In this App Iam trying To Design Some Screens.
 
 
 # Food Screen
