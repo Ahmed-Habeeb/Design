@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter1/screens/covid-19.dart';
+import 'package:flutter1/screens/e-commerce/providers/user_provider.dart';
+import 'package:flutter1/screens/e-commerce/screens/home_screen.dart';
 import 'package:flutter1/screens/profiles/firstprofile.dart';
 import 'package:flutter1/screens/profiles/secprofile.dart';
+import 'package:provider/provider.dart';
 
 import 'modules/screens_module.dart';
 import 'screens/food_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => User_provider(),)
+      ],
+      child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -17,6 +24,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   List<Screens_module> screens=[
+    Screens_module("E-Commerce",()=>Home_Screen()),
     Screens_module("Food-Delivery",()=>Food()),
     Screens_module("Covid-19",()=>Covid()),
     Screens_module("Profile-1",()=>Firstprofile()),
