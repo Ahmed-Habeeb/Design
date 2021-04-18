@@ -6,7 +6,9 @@ import 'package:flutter1/screens/profiles/firstprofile.dart';
 import 'package:flutter1/screens/profiles/secprofile.dart';
 import 'package:provider/provider.dart';
 
-import 'modules/screens_module.dart';
+import 'screens/e-commerce/screens/adminpanel/admin_home.dart';
+import 'screens/e-commerce/screens/auth/LoginSrceen.dart';
+import 'screens/e-commerce/screens/auth/RegisterScreen.dart';
 import 'screens/food_screen.dart';
 
 void main() {
@@ -23,12 +25,42 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<Screens_module> screens=[
-    Screens_module("E-Commerce",()=>Home_Screen()),
-    Screens_module("Food-Delivery",()=>Food()),
-    Screens_module("Covid-19",()=>Covid()),
-    Screens_module("Profile-1",()=>Firstprofile()),
-    Screens_module("Profile-2",()=>Profile2()),
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: {
+        "init":(context)=>HomePage(),
+        "E-Commerce":(context)=>Home_Screen(),
+        "Food-Delivery":(context)=>Food(),
+        "Covid-19":(context)=>Covid(),
+        "Profile-1":(context)=>Firstprofile(),
+        "Profile-2":(context)=>Profile2(),
+        "E-Commerce Home":(context)=>Home_Screen(),
+        "Admin-Panel":(context)=>Admin_Home(),
+        "Login":(context)=>LoginScreen(),
+        "Register":(context)=>RegisterScreen(),
+
+
+
+
+      },
+      initialRoute: "init",
+    );
+  }
+
+
+
+
+}
+class HomePage extends StatelessWidget {
+  List<String> screens=[
+    "E-Commerce",
+    "Food-Delivery",
+    "Covid-19",
+    "Profile-1",
+    "Profile-2",
 
 
 
@@ -36,27 +68,24 @@ class _MyAppState extends State<MyApp> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Material(
-        child: Scaffold(
-          appBar: AppBar(title: Text("Screens",style: TextStyle(letterSpacing: 2.5,fontSize: 25,fontWeight: FontWeight.bold),),centerTitle: true,elevation: 0,),
-          body: ListView.builder(padding: EdgeInsets.only(top: 20),itemCount:screens.length,itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => screens[index].screen(),));
-              },
-              child: Card(
+    return Material(
+      child: Scaffold(
+        appBar: AppBar(title: Text("Screens",style: TextStyle(letterSpacing: 2.5,fontSize: 25,fontWeight: FontWeight.bold),),centerTitle: true,elevation: 0,),
+        body: ListView.builder(padding: EdgeInsets.only(top: 20),itemCount:screens.length,itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context,  screens[index]);
+            },
+            child: Card(
+              margin: EdgeInsets.all(10),
+              elevation: 25,
+              child: Container(
                 margin: EdgeInsets.all(10),
-                elevation: 25,
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  child: Center(child: Text(screens[index].name,style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,letterSpacing: 1.5),)),
-                ),
+                child: Center(child: Text(screens[index],style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,letterSpacing: 1.5),)),
               ),
-            );
-          },),
-        ),
+            ),
+          );
+        },),
       ),
     );
   }
