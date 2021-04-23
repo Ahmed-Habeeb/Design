@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter1/screens/covid-19.dart';
 import 'package:flutter1/screens/e-commerce/providers/user_provider.dart';
 import 'package:flutter1/screens/e-commerce/screens/home_screen.dart';
+import 'package:flutter1/screens/nicescreen.dart';
 import 'package:flutter1/screens/profiles/firstprofile.dart';
 import 'package:flutter1/screens/profiles/secprofile.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +12,9 @@ import 'screens/e-commerce/screens/auth/LoginSrceen.dart';
 import 'screens/e-commerce/screens/auth/RegisterScreen.dart';
 import 'screens/food_screen.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => User_provider(),)
@@ -41,6 +44,8 @@ class _MyAppState extends State<MyApp> {
         "Admin-Panel":(context)=>Admin_Home(),
         "Login":(context)=>LoginScreen(),
         "Register":(context)=>RegisterScreen(),
+        "NiceScreen":(context)=>NiceScreen(),
+
 
 
 
@@ -61,6 +66,7 @@ class HomePage extends StatelessWidget {
     "Covid-19",
     "Profile-1",
     "Profile-2",
+    "NiceScreen"
 
 
 

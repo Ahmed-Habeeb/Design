@@ -37,7 +37,7 @@ class _MyDrawerState extends State<MyDrawer> {
           onTap: () {
             if(_list[postion]=="Home"){
               Navigator.pop(context);
-              Navigator.pushNamed(context, "init");
+              Navigator.pushNamedAndRemoveUntil(context, "init",(r)=>false);
 
             }else {
               Navigator.pop(context);
