@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/e-commerce/modules/ItemModule.dart';
+
+import '../modules/ItemModule.dart';
 
 class Details_Screen extends StatefulWidget {
   ItemModule _item_module;
@@ -66,14 +67,14 @@ class _Details_ScreenState extends State<Details_Screen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Text(
-                          _item.title,
+                          _item.title!,
                           style: TextStyle(
                               fontSize: 25,
                               letterSpacing: 1.5,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          _item.price + "   L.E",
+                          _item.price! + "   L.E",
                           style: TextStyle(
                               color: Colors.grey.shade700,
                               letterSpacing: 1.5,
@@ -94,7 +95,7 @@ class _Details_ScreenState extends State<Details_Screen> {
                       height: 15,
                     ),
                     Text(
-                      _item.title,
+                      _item.title!,
                       style: TextStyle(
                           letterSpacing: 2,
                           wordSpacing: 2,

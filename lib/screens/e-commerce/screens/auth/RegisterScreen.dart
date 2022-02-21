@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/e-commerce/providers/user_provider.dart';
 
-import 'package:provider/provider.dart';
 
 
 class RegisterScreen extends StatefulWidget {

@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/main.dart';
-import 'package:flutter1/screens/e-commerce/screens/adminpanel/admin_home.dart';
-import 'package:flutter1/screens/e-commerce/screens/auth/LoginSrceen.dart';
-import 'package:flutter1/screens/e-commerce/screens/auth/RegisterScreen.dart';
-import 'package:flutter1/screens/e-commerce/screens/home_screen.dart';
 
 
 class MyDrawer extends StatefulWidget {

@@ -1,11 +1,11 @@
 
+import 'package:designn/screens/e-commerce/screens/sharedwidgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/e-commerce/modules/ItemModule.dart';
-import 'package:flutter1/screens/e-commerce/providers/user_provider.dart';
-import 'package:flutter1/screens/e-commerce/screens/sharedwidgets.dart';
 import 'package:provider/provider.dart';
 import '../../mydrawer.dart';
+import '../modules/ItemModule.dart';
+import '../providers/user_provider.dart';
 import 'details_screen.dart';
 
 class Home_Screen extends StatefulWidget {
@@ -15,7 +15,7 @@ class Home_Screen extends StatefulWidget {
 
 class _Home_ScreenState extends State<Home_Screen> with SingleTickerProviderStateMixin {
 
-  TextEditingController _controller;
+  late TextEditingController _controller;
 
   @override
   void initState() {
@@ -113,9 +113,9 @@ class _Home_ScreenState extends State<Home_Screen> with SingleTickerProviderStat
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(item.title,style: TextStyle(fontSize: 20,letterSpacing: 1.5,fontWeight: FontWeight.bold),),
+              Text(item.title!,style: TextStyle(fontSize: 20,letterSpacing: 1.5,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text(item.price+"   L.E",style: TextStyle(color: Colors.grey.shade700,letterSpacing: 1.5,fontSize: 15,fontWeight: FontWeight.bold),),
+              Text(item.price!+"   L.E",style: TextStyle(color: Colors.grey.shade700,letterSpacing: 1.5,fontSize: 15,fontWeight: FontWeight.bold),),
 
 
             ],

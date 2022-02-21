@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/e-commerce/modules/ItemModule.dart';
-import 'package:flutter1/screens/e-commerce/providers/user_provider.dart';
-import 'package:flutter1/screens/e-commerce/screens/adminpanel/AddEdit.dart';
-import 'package:flutter1/screens/mydrawer.dart';
 import 'package:provider/provider.dart';
 
+import '../../../mydrawer.dart';
+import '../../modules/ItemModule.dart';
+import '../../providers/user_provider.dart';
 import '../details_screen.dart';
+import 'AddEdit.dart';
 
 
 
@@ -104,9 +104,9 @@ class _Admin_HomeState extends State<Admin_Home> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(item.title,style: TextStyle(fontSize: 20,letterSpacing: 1.5,fontWeight: FontWeight.bold),),
+              Text(item.title!,style: TextStyle(fontSize: 20,letterSpacing: 1.5,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text(item.price+"   L.E",style: TextStyle(color: Colors.grey.shade700,letterSpacing: 1.5,fontSize: 15,fontWeight: FontWeight.bold),),
+              Text(item.price!+"   L.E",style: TextStyle(color: Colors.grey.shade700,letterSpacing: 1.5,fontSize: 15,fontWeight: FontWeight.bold),),
               Transform.translate(
                   offset: Offset(95,150),
                   child: InkWell(

@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/e-commerce/modules/ItemModule.dart';
-import 'package:flutter1/screens/e-commerce/providers/user_provider.dart';
 import 'package:provider/provider.dart';
+
+import '../../modules/ItemModule.dart';
+import '../../providers/user_provider.dart';
 
 
 
 class AddEdit extends StatefulWidget {
   String _title;
-  int id;
+  int? id;
 
 
   AddEdit(this._title, this.id);
 
   @override
-  _AddEditState createState() => _AddEditState(_title,id);
+  _AddEditState createState() => _AddEditState(_title,id!);
 }
 
 class _AddEditState extends State<AddEdit> {
 
-  TextEditingController _titlecontroller = TextEditingController();
-  TextEditingController _pricecontroller = TextEditingController();
+  final TextEditingController _titlecontroller = TextEditingController();
+  final TextEditingController _pricecontroller = TextEditingController();
 
   String _title;
   int id;

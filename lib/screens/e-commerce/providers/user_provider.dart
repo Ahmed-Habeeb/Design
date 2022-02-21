@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/e-commerce/modules/ItemModule.dart';
+
+import '../modules/ItemModule.dart';
 
 
 class User_provider with ChangeNotifier{
@@ -19,7 +20,7 @@ class User_provider with ChangeNotifier{
   }
 
   edititem(ItemModule item){
-    items[item.id]=item;
+    items[item.id!]=item;
     notifyListeners();
   }
 

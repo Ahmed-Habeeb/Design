@@ -6,7 +6,7 @@ class Food extends StatefulWidget {
 }
 
 class _FoodState extends State<Food> with SingleTickerProviderStateMixin {
-  TabController tabcont;
+  late TabController tabcont;
 
   @override
   void initState() {
