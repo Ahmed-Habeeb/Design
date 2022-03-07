@@ -1,16 +1,26 @@
-# designn
+# Design App
 
-A new Flutter project.
+In this App Iam trying To Design Some Screens.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Food Screen
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://user-images.githubusercontent.com/58302841/90795819-d02ed980-e30e-11ea-8b13-adb0dfe6d8a0.png" width="200" height="400" />
+
+
+# Covid Screen
+
+<img src="https://user-images.githubusercontent.com/58302841/90795901-edfc3e80-e30e-11ea-9443-cb995748ec7b.png" width="200" height="400" />
+  
+  
+  
+# Profile-1
+
+<img src="https://user-images.githubusercontent.com/58302841/90795993-09674980-e30f-11ea-89fb-8716cd65898d.png" width="200" height="400" />
+
+# Profile-2
+
+<img src="https://user-images.githubusercontent.com/58302841/90796054-1a17bf80-e30f-11ea-97ef-1972083864b6.png" width="200" height="400" />
+
